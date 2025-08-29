@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>News — Aadarsh Sahoo</title>
+  <link href="https://aadsah.github.io/news.xml" rel="self"/>
+  <link href="https://aadsah.github.io/"/>
+  <updated>2025-06-15T00:00:00Z</updated>
+  <id>https://aadsah.github.io/</id>
+
+  <entry>
+    <title>Kyvo preprint on arXiv</title>
+    <link href="https://arxiv.org/abs/2506.08002"/>
+    <id>tag:aadsah.github.io,2025-06-15:kyvo</id>
+    <updated>2025-06-15T00:00:00Z</updated>
+    <summary>Aligning Text, Images, and 3D Structure Token-by-Token (Kyvo) preprint released; project page live.</summary>
+  </entry>
+
+  <entry>
+    <title>XPL accepted to TMLR</title>
+    <link href="https://openreview.net/forum?id=oxAZv3QD6M"/>
+    <id>tag:aadsah.github.io,2024-07-01:xpl</id>
+    <updated>2024-07-01T00:00:00Z</updated>
+    <summary>XPL: Semi-Supervised Prompt Learning in VLMs accepted by TMLR.</summary>
+  </entry>
+</feed>
