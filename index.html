@@ -756,10 +756,8 @@
         </div>
       </div>
       <div style="display:flex; justify-content:flex-end;">
-        <a href="images/Aadarsh.png" aria-label="Open portrait in full size">
-          <img class="portrait" src="images/Aadarsh.png" alt="Portrait of Aadarsh Sahoo" width="320" height="320"
-            loading="lazy" decoding="async" />
-        </a>
+        <img class="portrait" src="images/Aadarsh.png" alt="Portrait of Aadarsh Sahoo" width="320" height="320"
+          loading="lazy" decoding="async" />
       </div>
     </section>
 
@@ -906,7 +904,8 @@
             <h3 class="pub-title"><a href="https://openreview.net/forum?id=oxAZv3QD6M">XPL: A Cross-Model framework for
                 Semi-Supervised Prompt Learning in Vision–Language Models</a></h3>
             <p class="pub-meta">Omprakash Chakraborty, <strong>Aadarsh Sahoo</strong>, Rameswar Panda, Abir Das —
-              <em>TMLR</em>, 2024</p>
+              <em>TMLR</em>, 2024
+            </p>
             <p>A semi-supervised prompt learning framework leveraging unlabeled data to improve VLM adaptation via
               cross-model consistency.</p>
             <p class="pub-links">
@@ -923,7 +922,8 @@
           <div>
             <h3 class="pub-title"><a href="data/AnyDA_2022.pdf">AnyDA: Anytime Domain Adaptation</a></h3>
             <p class="pub-meta">Omprakash Chakraborty, <strong>Aadarsh Sahoo</strong>, Rameswar Panda, Abir Das —
-              <em>ICLR</em>, 2023</p>
+              <em>ICLR</em>, 2023
+            </p>
             <p>We propose a domain-alignment approach with switchable depth, width, and input resolution to realize
               accuracy–efficiency trade-offs under different constraints.</p>
             <p class="pub-links">
@@ -943,7 +943,8 @@
                 href="https://proceedings.neurips.cc/paper/2021/file/c47e93742387750baba2e238558fa12d-Paper.pdf">Contrast
                 and Mix: Temporal Contrastive Video Domain Adaptation with Background Mixing</a></h3>
             <p class="pub-meta"><strong>Aadarsh Sahoo</strong>, Rutav Shah, Rameswar Panda, Kate Saenko, Abir Das —
-              <em>NeurIPS</em>, 2021</p>
+              <em>NeurIPS</em>, 2021
+            </p>
             <p>We introduce a temporal contrastive learning approach for unsupervised video domain adaptation by
               leveraging video speed, background mixing, and target pseudo-labels.</p>
             <p class="pub-links">
@@ -968,7 +969,8 @@
                 Label, and Mix: Learning Discriminative Invariant Feature Representations for Partial Domain
                 Adaptation</a></h3>
             <p class="pub-meta"><strong>Aadarsh Sahoo</strong>, Rameswar Panda, Rogerio Feris, Kate Saenko, Abir Das —
-              <em>NeurIPS-W</em> 2021; <em>WACV</em> 2023 <em>(Best Paper Honorable Mention)</em></p>
+              <em>NeurIPS-W</em> 2021; <em>WACV</em> 2023 <em>(Best Paper Honorable Mention)</em>
+            </p>
             <p>We develop a ‘Select, Label, and Mix’ (SLM) framework that aims to learn discriminative invariant feature
               representations for partial domain adaptation.</p>
             <p class="pub-links">
@@ -991,7 +993,8 @@
             <h3 class="pub-title"><a href="data/Imbalance_ECCVW_2020.pdf">Mitigating Dataset Imbalance via Joint
                 Generation and Classification</a></h3>
             <p class="pub-meta"><strong>Aadarsh Sahoo</strong>, Ankit Singh, Rameswar Panda, Rogerio Feris, Abir Das —
-              <em>ECCV-W</em>, 2020 <em>(Oral)</em></p>
+              <em>ECCV-W</em>, 2020 <em>(Oral)</em>
+            </p>
             <p>We introduce a dataset repair strategy combining a classifier with a GAN to augment minority-class
               examples.</p>
             <p class="pub-links">
@@ -1116,24 +1119,6 @@
       };
       window.addEventListener('scroll', spy, { passive: true });
       spy();
-
-      // Subtle parallax for portrait
-      const portrait = document.querySelector('.portrait');
-      const hero = document.querySelector('.hero');
-      if (portrait && hero && !prefersReduced) {
-        let rafId = null;
-        hero.addEventListener('mousemove', (e) => {
-          const r = hero.getBoundingClientRect();
-          const x = (e.clientX - r.left) / r.width - 0.5;
-          const y = (e.clientY - r.top) / r.height - 0.5;
-          const tx = x * 6; const ty = y * 6;
-          if (rafId) cancelAnimationFrame(rafId);
-          rafId = requestAnimationFrame(() => {
-            portrait.style.transform = `translate3d(${tx}px, ${ty}px, 0)`;
-          });
-        });
-        hero.addEventListener('mouseleave', () => { portrait.style.transform = ''; });
-      }
 
       // Alt+1..6 shortcuts to jump between sections
       const ids = ['about', 'research', 'news', 'publications', 'services', 'contact'];
