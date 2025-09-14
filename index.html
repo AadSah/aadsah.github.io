@@ -83,6 +83,10 @@
       --font-sans: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
       --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
       color-scheme: light;
+      /* Glass tokens */
+      --glass-bg: rgba(255, 255, 255, 0.55);
+      --glass-border: rgba(255, 255, 255, 0.4);
+      --glass-highlight: rgba(255, 255, 255, 0.85);
     }
 
     html,
@@ -121,9 +125,11 @@
     header.site-header {
       position: sticky;
       top: 0;
-      backdrop-filter: saturate(180%) blur(6px);
-      background: color-mix(in srgb, var(--bg) 85%, transparent);
-      border-bottom: 1px solid var(--border);
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.6));
+      backdrop-filter: blur(10px) saturate(140%);
+      -webkit-backdrop-filter: blur(10px) saturate(140%);
+      border-bottom: 1px solid var(--glass-border);
+      box-shadow: 0 8px 30px rgba(2, 6, 23, .05);
       z-index: 10;
     }
 
@@ -197,6 +203,22 @@
       gap: 16px;
       align-items: center;
       padding: 24px 0 6px;
+      position: relative;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      right: clamp(0px, 2vw, 12px);
+      top: 8px;
+      width: 240px;
+      height: 240px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.35) 60%, rgba(255, 255, 255, 0) 70%);
+      filter: blur(10px);
+      opacity: .45;
+      pointer-events: none;
+      z-index: 0;
     }
 
     h1 {
@@ -218,6 +240,11 @@
       flex-wrap: wrap;
       gap: 6px;
       margin-top: 8px;
+      padding: 0;
+      border: 0;
+      border-radius: 0;
+      background: transparent;
+      box-shadow: none;
     }
 
     /* Cute, small, techy buttons with icons */
@@ -291,6 +318,8 @@
       box-shadow: 0 0 0 3px var(--bg), 0 0 0 4px color-mix(in srgb, var(--accent) 18%, transparent), 0 10px 22px rgba(0, 0, 0, 0.06);
       display: block;
       margin-top: 4px;
+      position: relative;
+      z-index: 1;
     }
 
     /* Sections */
@@ -324,9 +353,12 @@
       padding: 6px 10px;
       max-height: 300px;
       overflow-y: auto;
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      background: var(--card);
+      border: 1px solid var(--glass-border);
+      border-radius: 12px;
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.5));
+      backdrop-filter: blur(8px) saturate(130%);
+      -webkit-backdrop-filter: blur(8px) saturate(130%);
+      box-shadow: 0 8px 24px rgba(2, 6, 23, .04), inset 0 1px 0 var(--glass-highlight);
     }
 
     .timeline li {
@@ -387,11 +419,13 @@
       display: grid;
       grid-template-columns: 130px 1fr;
       gap: 10px;
-      background: var(--card);
-      border: 1px solid var(--border);
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.86), rgba(255, 255, 255, 0.55));
+      border: 1px solid var(--glass-border);
       border-radius: 12px;
       padding: 8px;
-      box-shadow: 0 1px 0 rgba(0, 0, 0, 0.02);
+      box-shadow: 0 1px 0 rgba(0, 0, 0, 0.02), 0 8px 30px rgba(2, 6, 23, .04);
+      backdrop-filter: blur(6px) saturate(120%);
+      -webkit-backdrop-filter: blur(6px) saturate(120%);
       transition: transform .16s var(--ease), box-shadow .22s var(--ease), border-color .22s var(--ease), background-color .22s var(--ease);
       overflow: hidden;
     }
@@ -514,12 +548,6 @@
       margin: 3px 0;
     }
 
-    / footer {
-      padding: 14px 0 22px;
-      color: var(--muted);
-      font-size: 13px;
-      border-top: 1px solid var(--border);
-    }
 
     /* Accessibility */
     a:focus-visible,
@@ -723,6 +751,23 @@
     @keyframes blink {
       50% {
         opacity: .25;
+      }
+    }
+
+    /* Glass fallback when backdrop-filter unsupported */
+    @supports not ((-webkit-backdrop-filter: blur(1px)) or (backdrop-filter: blur(1px))) {
+
+      .cta,
+      .timeline,
+      .pub-card,
+      header.site-header {
+        background: var(--card) !important;
+        border-color: var(--border) !important;
+        box-shadow: 0 1px 0 rgba(0, 0, 0, 0.02) !important;
+      }
+
+      .hero::after {
+        display: none;
       }
     }
   </style>
