@@ -190,12 +190,12 @@
       border-radius: 8px;
     }
 
-    /* Hero – single column */
+    /* Hero – two columns (image right) */
     .hero {
       display: grid;
-      grid-template-columns: 1fr;
+      grid-template-columns: 1.35fr 0.65fr;
       gap: 16px;
-      align-items: start;
+      align-items: center;
       padding: 24px 0 6px;
     }
 
@@ -445,6 +445,10 @@
 
     /* Responsive */
     @media (max-width: 860px) {
+      .hero {
+        grid-template-columns: 1fr;
+      }
+
       .pub-card {
         grid-template-columns: 1fr;
       }
@@ -545,7 +549,7 @@
           </a>
         </div>
       </div>
-      <div style="display:flex; justify-content:center;">
+      <div style="display:flex; justify-content:flex-end;">
         <a href="images/Aadarsh.png" aria-label="Open portrait in full size">
           <img class="portrait" src="images/Aadarsh.png" alt="Portrait of Aadarsh Sahoo" width="320" height="320"
             loading="lazy" decoding="async" />
