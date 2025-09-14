@@ -1,45 +1,32 @@
-<!DOCTYPE HTML>
+<!doctype html>
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <title>Aadarsh Sahoo</title>
-
-  <meta name="author" content="Aadarsh Sahoo">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <!-- SEO -->
+  <meta charset="utf-8" />
+  <title>Aadarsh Sahoo — Caltech Ph.D. Student</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="author" content="Aadarsh Sahoo" />
   <meta name="description"
-    content="Aadarsh Sahoo — Ph.D. student at Caltech advised by Prof. Georgia Gkioxari and Prof. Pietro Perona. Research in computer vision, multimodal learning, domain adaptation, and vision-language models.">
-  <link rel="canonical" href="https://aadsah.github.io/">
+    content="Aadarsh Sahoo — Ph.D. student at Caltech advised by Prof. Georgia Gkioxari and Prof. Pietro Perona. Research in computer vision, multimodal learning, domain adaptation, and vision–language models." />
+  <link rel="canonical" href="https://aadsah.github.io/" />
 
   <!-- Social sharing (Open Graph / Twitter) -->
-  <meta property="og:type" content="profile">
-  <meta property="og:title" content="Aadarsh Sahoo">
-  <meta property="og:description" content="Ph.D. student at Caltech. Computer vision & multimodal learning.">
-  <meta property="og:url" content="https://aadsah.github.io/">
-  <meta property="og:image" content="https://aadsah.github.io/images/Aadarsh.png">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Aadarsh Sahoo">
-  <meta name="twitter:description" content="Ph.D. student at Caltech. Computer vision & multimodal learning.">
-  <meta name="twitter:image" content="https://aadsah.github.io/images/Aadarsh.png">
-  <meta name="theme-color" content="#ffffff">
+  <meta property="og:type" content="profile" />
+  <meta property="og:title" content="Aadarsh Sahoo" />
+  <meta property="og:description" content="Ph.D. student at Caltech. Computer vision & multimodal learning." />
+  <meta property="og:url" content="https://aadsah.github.io/" />
+  <meta property="og:image" content="https://aadsah.github.io/images/Aadarsh.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Aadarsh Sahoo" />
+  <meta name="twitter:description" content="Ph.D. student at Caltech. Computer vision & multimodal learning." />
+  <meta name="twitter:image" content="https://aadsah.github.io/images/Aadarsh.png" />
+  <meta name="theme-color" content="#ffffff" />
 
-  <!-- Keep your existing style -->
-  <link rel="stylesheet" type="text/css" href="stylesheet.css">
-  <link rel="icon" type="image/png" href="images/Aadarsh.png">
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/Aadarsh.png" />
 
-  <!-- Accessible, invisible H1 to add semantic structure without changing visuals -->
-  <style>
-    .visually-hidden {
-      position: absolute !important;
-      height: 1px;
-      width: 1px;
-      overflow: hidden;
-      clip: rect(1px, 1px, 1px, 1px);
-      white-space: nowrap;
-    }
-  </style>
+  <!-- Keep existing stylesheet if present; styles below will override as needed -->
+  <link rel="stylesheet" href="stylesheet.css" />
 
   <!-- Structured data for rich results -->
   <script type="application/ld+json">
@@ -75,362 +62,730 @@
     ]
   }
   </script>
+
+  <style>
+    :root {
+      /* Light, minimal, tech-like palette */
+      --bg: #ffffff;
+      --surface: #f7f8fb;
+      --card: #ffffff;
+      --text: #0f172a;
+      /* slate-900 */
+      --muted: #475569;
+      /* slate-600 */
+      --border: #e5e7eb;
+      /* gray-200 */
+      --accent: #2563eb;
+      /* blue-600 */
+      --accent-weak: #eff6ff;
+      /* blue-50 */
+      color-scheme: light;
+    }
+
+    html,
+    body {
+      height: 100%;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Inter, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+      line-height: 1.6;
+      background:
+        /* subtle tech grid */
+        linear-gradient(to bottom, transparent 0, transparent 23px, var(--surface) 24px),
+        linear-gradient(to right, transparent 0, transparent 23px, var(--surface) 24px),
+        var(--bg);
+      background-size: 24px 24px, 24px 24px, auto;
+      color: var(--text);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* Layout */
+    .container {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 24px;
+    }
+
+    header.site-header {
+      position: sticky;
+      top: 0;
+      backdrop-filter: saturate(180%) blur(6px);
+      background: color-mix(in srgb, var(--bg) 85%, transparent);
+      border-bottom: 1px solid var(--border);
+      z-index: 10;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .brand {
+      font-weight: 700;
+      letter-spacing: 0.3px;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .brand::after {
+      content: "";
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 18%, transparent);
+    }
+
+    .nav a {
+      color: var(--muted);
+      text-decoration: none;
+      padding: 8px 10px;
+      border-radius: 10px;
+    }
+
+    .nav a:hover,
+    .nav a:focus {
+      color: var(--text);
+      background: var(--surface);
+      outline: none;
+    }
+
+    /* Skip link */
+    .skip-link {
+      position: absolute;
+      left: -999px;
+      top: auto;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+    }
+
+    .skip-link:focus {
+      left: 16px;
+      top: 16px;
+      width: auto;
+      height: auto;
+      padding: 8px 12px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+    }
+
+    /* Hero */
+    .hero {
+      display: grid;
+      grid-template-columns: 1.6fr 1fr;
+      gap: 32px;
+      align-items: center;
+      padding: 48px 0 12px;
+    }
+
+    h1 {
+      font-size: clamp(28px, 5vw, 40px);
+      line-height: 1.15;
+      margin: 0 0 8px 0;
+      letter-spacing: -0.02em;
+    }
+
+    .subtitle {
+      color: var(--muted);
+      margin: 0 0 20px;
+    }
+
+    .cta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 18px;
+    }
+
+    /* Cute, small, techy buttons with icons */
+    .btn {
+      --pad-y: 7px;
+      --pad-x: 11px;
+      --radius: 9999px;
+      --shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+      appearance: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border: 1px solid var(--border);
+      background: var(--card);
+      color: var(--text);
+      padding: var(--pad-y) var(--pad-x);
+      border-radius: var(--radius);
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 14px;
+      transition: transform .06s ease, background .2s ease, border-color .2s ease, box-shadow .2s ease;
+      box-shadow: var(--shadow);
+    }
+
+    .btn:hover {
+      transform: translateY(-1px);
+      background: var(--surface);
+      border-color: #d1d5db;
+    }
+
+    .btn:active {
+      transform: translateY(0);
+    }
+
+    .btn .icon {
+      width: 14px;
+      height: 14px;
+      display: inline-block;
+    }
+
+    .btn .icon svg {
+      width: 14px;
+      height: 14px;
+      display: block;
+    }
+
+    .btn.primary {
+      border-color: color-mix(in srgb, var(--accent) 30%, var(--border));
+      background: var(--accent-weak);
+    }
+
+    .btn.primary:hover {
+      border-color: var(--accent);
+    }
+
+    .portrait {
+      width: 100%;
+      max-width: 320px;
+      border-radius: 16px;
+      display: block;
+      border: 1px solid var(--border);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+    }
+
+    /* Sections */
+    section {
+      padding: 28px 0;
+    }
+
+    .section-title {
+      font-size: 12px;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 16px;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    }
+
+    /* About copy */
+    .about p {
+      margin: 8px 0;
+    }
+
+    .about a {
+      color: var(--accent);
+      text-underline-offset: 3px;
+    }
+
+    /* News timeline */
+    .timeline {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .timeline li {
+      display: grid;
+      grid-template-columns: 110px 1fr;
+      gap: 16px;
+      align-items: start;
+      padding: 10px 0;
+      border-bottom: 1px dashed var(--border);
+    }
+
+    .timeline li:last-child {
+      border-bottom: 0;
+    }
+
+    .timeline time {
+      font-variant-numeric: tabular-nums;
+      color: var(--muted);
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    }
+
+    /* Publications */
+    .pub-list {
+      display: grid;
+      gap: 16px;
+    }
+
+    .pub-card {
+      display: grid;
+      grid-template-columns: 180px 1fr;
+      gap: 16px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 14px;
+      box-shadow: 0 1px 0 rgba(0, 0, 0, 0.02);
+    }
+
+    .pub-thumb {
+      width: 100%;
+      height: 110px;
+      object-fit: cover;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      background: var(--surface);
+    }
+
+    .pub-title {
+      font-weight: 650;
+      margin: 0 0 4px;
+    }
+
+    .pub-meta {
+      color: var(--muted);
+      margin: 0 0 10px;
+    }
+
+    .pub-links {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .link-chip {
+      font-size: 13px;
+      padding: 6px 10px;
+      border: 1px solid var(--border);
+      border-radius: 9999px;
+      text-decoration: none;
+      color: var(--text);
+      background: var(--card);
+      box-shadow: 0 1px 0 rgba(0, 0, 0, 0.02);
+    }
+
+    .link-chip:hover {
+      background: var(--surface);
+    }
+
+    /* Services */
+    .services ul {
+      margin: 0;
+      padding-left: 18px;
+    }
+
+    /* Footer */
+    footer {
+      padding: 24px 0 40px;
+      color: var(--muted);
+      font-size: 14px;
+      border-top: 1px solid var(--border);
+    }
+
+    /* Accessibility */
+    a:focus-visible,
+    button:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
+      border-radius: 6px;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      * {
+        transition: none !important;
+        scroll-behavior: auto;
+      }
+    }
+
+    /* Responsive */
+    @media (max-width: 860px) {
+      .hero {
+        grid-template-columns: 1fr;
+      }
+
+      .hero .cta {
+        margin-bottom: 8px;
+      }
+
+      .pub-card {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
 
 <body>
-  <a class="visually-hidden" href="#main">Skip to content</a>
-  <h1 class="visually-hidden">Aadarsh Sahoo — Caltech Ph.D. Student</h1>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-  <table
-    style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-    <tbody>
-      <tr style="padding:0px">
-        <td style="padding:0px" id="main">
-          <table
-            style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-            <tbody>
-              <tr style="padding:0px">
-                <td style="padding:2.5%;width:63%;vertical-align:middle">
-                  <p style="text-align:center">
-                    <name>Aadarsh Sahoo</name>
-                  </p>
-                  <p>
-                    I am a Ph.D. student at <a href="https://www.caltech.edu/">Caltech</a> advised by <a
-                      href="https://gkioxari.github.io/">Prof. Georgia Gkioxari</a> and <a
-                      href="https://www.cms.caltech.edu/people/perona">Prof. Pietro Perona</a>.
-                  </p>
-                  <p>
-                    Prior to this, I was a student researcher at the <a
-                      href="https://mitibmwatsonailab.mit.edu/">MIT-IBM Watson AI Lab</a> pretraining Large Language
-                    Models along with research on Vision-Language Models with <a href="https://rpand002.github.io/">Dr.
-                      Rameswar Panda</a>, <a href="https://www.rogerioferis.org/">Dr. Rogerio Feris</a>, and <a
-                      href="https://people.csail.mit.edu/yoonkim/">Prof. Yoon Kim</a>. I completed my dual-degree
-                    (B.Tech + M.Tech) from IIT Kharagpur where I worked as an undergraduate researcher at the Computer
-                    Vision and Intelligence Research Lab under the supervision of <a
-                      href="https://cse.iitkgp.ac.in/~adas/">Prof. Abir Das</a>.
-                  </p>
-                  <p>In the summer of 2021, I was fortunate to get an opportunity to work under the guidance of <a
-                      href="https://www.bu.edu/cs/profiles/saenko/">Prof. Kate Saenko</a> (<a
-                      href="https://www.bu.edu/cs/">Boston University</a>) and <a
-                      href="https://people.eecs.berkeley.edu/~trevor/">Prof. Trevor Darrell</a> (<a
-                      href="http://www.eecs.berkeley.edu/">UC Berkeley</a>), as a research intern for the DARPA LwLL
-                    Project.
-                  </p>
-                  <p style="text-align:center">
-                    <a href="mailto:aadarsh.sahoo.99@gmail.com">Email</a> &nbsp/&nbsp
-                    <a href="https://scholar.google.com/citations?user=1nPhcH0AAAAJ">Google Scholar</a> &nbsp/&nbsp
-                    <a href="data/Resume_Aadarsh.pdf">Resume</a> &nbsp/&nbsp
-                    <a href="https://www.linkedin.com/in/aadarshsahoo/" rel="me">LinkedIn</a> &nbsp/&nbsp
-                    <a href="https://github.com/aadsah" rel="me">Github</a>
-                  </p>
-                </td>
-                <td style="padding:2.5%;width:30%;max-width:40%">
-                  <a href="images/Aadarsh.png">
-                    <img style="width:100%;max-width:100%" alt="Portrait of Aadarsh Sahoo" src="images/Aadarsh.png"
-                      class="hoverZoomLink" loading="lazy" decoding="async">
-                  </a>
-                </td>
-              </tr>
-            </tbody>
-          </table>
+  <header class="site-header" role="banner">
+    <div class="container nav" aria-label="Top navigation">
+      <div class="brand">Aadarsh Sahoo</div>
+      <nav aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#news">News</a>
+        <a href="#publications">Publications</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-          <table
-            style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-            <tbody>
-              <tr>
-                <td style="padding:20px;width:100%;vertical-align:middle">
-                  <heading>News</heading>
-                  <ul>
-                    <li><time datetime="2025-06">[Jun'25]</time> Preprint <em>“Aligning Text, Images, and 3D Structure
-                        Token-by-Token (Kyvo)”</em> released on <a href="https://arxiv.org/abs/2506.08002">arXiv</a> (<a
-                        href="https://glab-caltech.github.io/kyvo/">project page</a>).</li>
-                    <li><time datetime="2024-07">[Jul'24]</time> <em>“XPL: A Cross-Model framework for Semi-Supervised
-                        Prompt Learning in VLMs”</em> accepted by <a href="https://tmlr.org/">TMLR</a>.</li>
-                    <li><time datetime="2023-01">[Jan'23]</time> Paper on Anytime Domain Adaptation accepted at <a
-                        href="https://iclr.cc/">ICLR 2023</a>.</li>
-                    <li><time datetime="2023-01">[Jan'23]</time> Select, Label, and Mix (SLM) received the <font
-                        color="red">Best Paper Honorable Mention Award at <a href="https://wacv2023.thecvf.com/">WACV
-                          2023</a>!</font>
-                    </li>
-                    <li><time datetime="2022-10">[Oct'22]</time> Paper on Partial Domain Adaptation accepted at <a
-                        href="https://wacv2023.thecvf.com/">WACV 2023</a>.</li>
-                    <li><time datetime="2022-07">[Jul'22]</time> Started working as a student researcher at the <a
-                        href="https://mitibmwatsonailab.mit.edu/">MIT-IBM Watson AI Lab</a> at Cambridge, MA.</li>
-                    <li><time datetime="2021-10">[Oct'21]</time> Extended Abstract on Partial Domain Adaptation accepted
-                      at <a href="https://sites.google.com/view/distshift2021/home">NeurIPS DistShift Workshop 2021</a>.
-                    </li>
-                    <li><time datetime="2021-09">[Sept'21]</time> Paper on Domain Adaptation in Action Recognition
-                      accepted at <a href="https://neurips.cc/">NeurIPS 2021</a>.</li>
-                    <li><time datetime="2021-06">[Jun'21]</time> Volunteer at the workshop on <a
-                        href="https://sites.google.com/view/cvpr2021-dnetcv/">Dynamic Neural Networks Meets Computer
-                        Vision (DNetCV)</a> at <a href="http://cvpr2021.thecvf.com/">CVPR 2021</a>.</li>
-                    <li><time datetime="2021-05">[May'21]</time> Started my internship at UC Berkeley and Boston
-                      University.</li>
-                    <li><time datetime="2020-08">[Aug'20]</time> One paper accepted at the <a
-                        href="https://eccv2020.eu/">ECCV 2020</a> Workshop on <a
-                        href="https://sites.google.com/view/ipcv2020/call-for-papers">Imbalance Problems in Computer
-                        Vision (IPCV)</a>.</li>
-                    <li><time datetime="2019-05">[May'19]</time> Joined CVIR, IIT Kharagpur as an undergraduate
-                      researcher in Computer Vision.</li>
-                    <li><time datetime="2018-07">[Jul'18]</time> Got Computer Science and Engineering as my major. (less
-                      than 1% acceptance)</li>
-                    <li><time datetime="2017-07">[Jul'17]</time> Got accepted into <a
-                        href="http://www.iitkgp.ac.in/">IIT Kharagpur</a> for my undergraduate studies through the <a
-                        href="https://en.wikipedia.org/wiki/Joint_Entrance_Examination_%E2%80%93_Advanced">JEE Advanced
-                        2017</a>.</li>
-                  </ul>
-                </td>
-              </tr>
-            </tbody>
-          </table>
+  <main id="main" class="container" role="main">
+    <!-- Hero -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div>
+        <h1 id="hero-title">Aadarsh Sahoo</h1>
+        <p class="subtitle">Ph.D. student at <a href="https://www.caltech.edu/">Caltech</a>, advised by <a
+            href="https://gkioxari.github.io/">Prof. Georgia Gkioxari</a> and <a
+            href="https://www.cms.caltech.edu/people/perona">Prof. Pietro Perona</a>.</p>
+        <div class="cta" role="group" aria-label="Quick actions">
+          <a class="btn primary" href="mailto:aadarsh.sahoo.99@gmail.com">
+            <span class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                stroke-linejoin="round" aria-hidden="true">
+                <path d="M4 6h16a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2z" />
+                <path d="m22 8-10 6L2 8" />
+              </svg>
+            </span>
+            Email
+          </a>
+          <a class="btn" href="https://scholar.google.com/citations?user=1nPhcH0AAAAJ">
+            <span class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M12 3 2 9l10 6 10-6-10-6Z" />
+                <path d="M6 12v5c0 .6.4 1 1 1h10c.6 0 1-.4 1-1v-5" />
+              </svg>
+            </span>
+            Scholar
+          </a>
+          <a class="btn" href="data/Resume_Aadarsh.pdf">
+            <span class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z" />
+                <path d="M14 2v6h6" />
+                <path d="M16 13H8" />
+                <path d="M16 17H8" />
+                <path d="M10 9H9" />
+              </svg>
+            </span>
+            Resume
+          </a>
+          <a class="btn" href="https://www.linkedin.com/in/aadarshsahoo/" rel="me">
+            <span class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <rect x="3" y="3" width="18" height="18" rx="3" />
+                <path fill="#fff"
+                  d="M8 10h2v7H8zM9 7.8a1.2 1.2 0 1 1 0-2.4 1.2 1.2 0 0 1 0 2.4zM12 10h2v1.1h.03c.28-.5 1-.98 2.05-.98 2.2 0 2.6 1.3 2.6 3v3.9h-2v-3.5c0-.83-.02-1.9-1.16-1.9-1.17 0-1.35.9-1.35 1.84V17h-2z" />
+              </svg>
+            </span>
+            LinkedIn
+          </a>
+          <a class="btn" href="https://github.com/aadsah" rel="me">
+            <span class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path
+                  d="M12 .5A11.5 11.5 0 0 0 .5 12.3c0 5.2 3.4 9.6 8 11.1.6.1.8-.3.8-.6v-2.2c-3.3.7-4-1.4-4-1.4-.5-1.2-1.2-1.5-1.2-1.5-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 .1.8-.9 1.8-1.3-2.6-.3-5.2-1.3-5.2-5.8 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.6.1-3.2 0 0 1-.3 3.3 1.2a11.4 11.4 0 0 1 6 0C18.1 3.8 19 4 19 4c.6 1.6.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.7 5.5-5.2 5.8.9.8 1 1.7 1 2.8v4.1c0 .3.2.7.9.6a11.6 11.6 0 0 0 7.8-11.1A11.5 11.5 0 0 0 12 .5Z" />
+              </svg>
+            </span>
+            GitHub
+          </a>
+        </div>
+      </div>
+      <div style="display:flex; justify-content:center;">
+        <a href="images/Aadarsh.png" aria-label="Open portrait in full size">
+          <img class="portrait" src="images/Aadarsh.png" alt="Portrait of Aadarsh Sahoo" width="320" height="320"
+            loading="lazy" decoding="async" />
+        </a>
+      </div>
+    </section>
 
-          <table
-            style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-            <tbody>
-              <tr>
-                <td style="padding:20px;width:100%;vertical-align:middle">
-                  <heading>Research</heading>
-                  <p>
-                    My research interests lie in understanding the <i>principles of learning</i> from multiple
-                    modalities and exploring how knowledge from one modality can be transferred to applications in
-                    others, with a goal to design embodied multimodal agents benefiting humanity. Obtaining answers to
-                    questions like - "Do toddlers use the same principles in learning new languages as they do in
-                    learning how to walk?" - should be fun!
-                  </p>
-                </td>
-              </tr>
-            </tbody>
-          </table>
+    <!-- About -->
+    <section id="about" class="about" aria-labelledby="about-title">
+      <h2 class="section-title" id="about-title">About</h2>
+      <p>
+        I am a Ph.D. student at <a href="https://www.caltech.edu/">Caltech</a> advised by <a
+          href="https://gkioxari.github.io/">Prof. Georgia Gkioxari</a> and <a
+          href="https://www.cms.caltech.edu/people/perona">Prof. Pietro Perona</a>.
+      </p>
+      <p>
+        Previously, I was a student researcher at the <a href="https://mitibmwatsonailab.mit.edu/">MIT–IBM Watson AI
+          Lab</a>, pretraining large language models and doing research on vision–language models with <a
+          href="https://rpand002.github.io/">Dr. Rameswar Panda</a>, <a href="https://www.rogerioferis.org/">Dr. Rogerio
+          Feris</a>, and <a href="https://people.csail.mit.edu/yoonkim/">Prof. Yoon Kim</a>. I completed a dual degree
+        (B.Tech + M.Tech) at IIT Kharagpur, where I worked in the Computer Vision and Intelligence Research Lab under <a
+          href="https://cse.iitkgp.ac.in/~adas/">Prof. Abir Das</a>.
+      </p>
+      <p>
+        In Summer 2021, I worked with <a href="https://www.bu.edu/cs/profiles/saenko/">Prof. Kate Saenko</a> (Boston
+        University) and <a href="https://people.eecs.berkeley.edu/~trevor/">Prof. Trevor Darrell</a> (UC Berkeley) as a
+        research intern for the DARPA LwLL project.
+      </p>
+    </section>
 
-          <table
-            style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-            <tbody>
-              <tr>
-                <td style="padding:20px;width:100%;vertical-align:middle">
-                  <heading>Publications</heading>
-                </td>
-              </tr>
-            </tbody>
-          </table>
+    <!-- News -->
+    <section id="news" aria-labelledby="news-title">
+      <h2 class="section-title" id="news-title">News</h2>
+      <ul class="timeline" aria-label="Recent updates">
+        <li>
+          <time datetime="2025-06">Jun 2025</time>
+          <div>Preprint <em>“Aligning Text, Images, and 3D Structure Token-by-Token (Kyvo)”</em> released on <a
+              href="https://arxiv.org/abs/2506.08002">arXiv</a> (<a href="https://glab-caltech.github.io/kyvo/">project
+              page</a>).</div>
+        </li>
+        <li>
+          <time datetime="2024-07">Jul 2024</time>
+          <div><em>“XPL: A Cross-Model framework for Semi-Supervised Prompt Learning in VLMs”</em> accepted by <a
+              href="https://tmlr.org/">TMLR</a>.</div>
+        </li>
+        <li>
+          <time datetime="2023-01">Jan 2023</time>
+          <div>Paper on Anytime Domain Adaptation accepted at <a href="https://iclr.cc/">ICLR 2023</a>.</div>
+        </li>
+        <li>
+          <time datetime="2023-01">Jan 2023</time>
+          <div>Select, Label, and Mix (SLM) received the <strong style="color:#dc2626">Best Paper Honorable
+              Mention</strong> at <a href="https://wacv2023.thecvf.com/">WACV 2023</a>.</div>
+        </li>
+        <li>
+          <time datetime="2022-10">Oct 2022</time>
+          <div>Paper on Partial Domain Adaptation accepted at <a href="https://wacv2023.thecvf.com/">WACV 2023</a>.
+          </div>
+        </li>
+        <li>
+          <time datetime="2022-07">Jul 2022</time>
+          <div>Started as a student researcher at the <a href="https://mitibmwatsonailab.mit.edu/">MIT–IBM Watson AI
+              Lab</a> in Cambridge, MA.</div>
+        </li>
+        <li>
+          <time datetime="2021-10">Oct 2021</time>
+          <div>Extended Abstract on Partial Domain Adaptation accepted at the <a
+              href="https://sites.google.com/view/distshift2021/home">NeurIPS DistShift Workshop 2021</a>.</div>
+        </li>
+        <li>
+          <time datetime="2021-09">Sep 2021</time>
+          <div>Paper on Domain Adaptation in Action Recognition accepted at <a href="https://neurips.cc/">NeurIPS
+              2021</a>.</div>
+        </li>
+        <li>
+          <time datetime="2021-06">Jun 2021</time>
+          <div>Volunteer at the CVPR 2021 workshop <a href="https://sites.google.com/view/cvpr2021-dnetcv/">Dynamic
+              Neural Networks Meets Computer Vision (DNetCV)</a>.</div>
+        </li>
+        <li>
+          <time datetime="2021-05">May 2021</time>
+          <div>Started internship at UC Berkeley and Boston University.</div>
+        </li>
+        <li>
+          <time datetime="2020-08">Aug 2020</time>
+          <div>Paper accepted at the <a href="https://eccv2020.eu/">ECCV 2020</a> Workshop on <a
+              href="https://sites.google.com/view/ipcv2020/call-for-papers">Imbalance Problems in Computer Vision
+              (IPCV)</a>.</div>
+        </li>
+        <li>
+          <time datetime="2019-05">May 2019</time>
+          <div>Joined CVIR, IIT Kharagpur as an undergraduate researcher in Computer Vision.</div>
+        </li>
+        <li>
+          <time datetime="2018-07">Jul 2018</time>
+          <div>Selected for Computer Science and Engineering major (&lt;1% acceptance).</div>
+        </li>
+        <li>
+          <time datetime="2017-07">Jul 2017</time>
+          <div>Admitted to <a href="http://www.iitkgp.ac.in/">IIT Kharagpur</a> via <a
+              href="https://en.wikipedia.org/wiki/Joint_Entrance_Examination_%E2%80%93_Advanced">JEE Advanced 2017</a>.
+          </div>
+        </li>
+      </ul>
+    </section>
 
-          <!-- Papers list -->
+    <!-- Research interests -->
+    <section aria-labelledby="research-title">
+      <h2 class="section-title" id="research-title">Research</h2>
+      <p>
+        My research interests lie in understanding the <em>principles of learning</em> across multiple modalities and
+        how knowledge transfers between them, with the goal of designing embodied multimodal agents that benefit
+        society. Questions like “Do toddlers use similar principles to learn new languages as they do to learn to walk?”
+        excite me.
+      </p>
+    </section>
 
-          <!-- NEW 2025: Aligning Text, Images, and 3D Structure Token-by-Token -->
-          <table
-            style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-            <tbody>
-              <tr onmouseout="nlt_stop()" onmouseover="nlt_start()">
-                <td style="padding:20px;width:25%;vertical-align:middle">
-                  <!-- Save a teaser image as images/2025_kyvo.png (any 320x200-ish crop) -->
-                  <img src="images/2025_kyvo.png" width="160" height="100"
-                    alt="Kyvo: Aligning Text, Images, and 3D Structure Token-by-Token teaser" loading="lazy"
-                    decoding="async">
-                </td>
-                <td width="75%" valign="middle">
-                  <a href="https://arxiv.org/abs/2506.08002">
-                    <papertitle>Aligning Text, Images, and 3D Structure Token-by-Token</papertitle>
-                  </a>
-                  <br>
-                  <strong>Aadarsh Sahoo</strong>, Vansh Tibrewal, Georgia Gkioxari<br>
-                  <em>arXiv</em>, 2025.<br>
-                  <a href="https://glab-caltech.github.io/kyvo/">project page</a> /
-                  <a href="https://arxiv.org/abs/2506.08002">arXiv</a> /
-                  <a href="https://github.com/glab-caltech/kyvo">code</a> /
-                  <a href="https://glab-caltech.github.io/kyvo/#bibtex">bibtex</a>
-                  <p>We present a unified LLM that aligns language, images, and structured 3D scenes and demonstrate it
-                    across rendering, recognition, instruction-following, and 3D QA.</p>
-                </td>
-              </tr>
-            </tbody>
-          </table>
+    <!-- Publications -->
+    <section id="publications" aria-labelledby="pubs-title">
+      <h2 class="section-title" id="pubs-title">Publications</h2>
+      <div class="pub-list">
+        <!-- 2025 Kyvo -->
+        <article class="pub-card" aria-label="Kyvo">
+          <img class="pub-thumb" src="images/2025_kyvo.png"
+            alt="Kyvo: Aligning Text, Images, and 3D Structure Token-by-Token teaser" loading="lazy" decoding="async"
+            width="180" height="110" />
+          <div>
+            <h3 class="pub-title"><a href="https://arxiv.org/abs/2506.08002">Aligning Text, Images, and 3D Structure
+                Token-by-Token</a></h3>
+            <p class="pub-meta"><strong>Aadarsh Sahoo</strong>, Vansh Tibrewal, Georgia Gkioxari — <em>arXiv</em>, 2025
+            </p>
+            <p>We present a unified LLM that aligns language, images, and structured 3D scenes, demonstrating
+              applications in rendering, recognition, instruction following, and 3D QA.</p>
+            <p class="pub-links">
+              <a class="link-chip" href="https://glab-caltech.github.io/kyvo/">Project page</a>
+              <a class="link-chip" href="https://arxiv.org/abs/2506.08002">arXiv</a>
+              <a class="link-chip" href="https://github.com/glab-caltech/kyvo">Code</a>
+              <a class="link-chip" href="https://glab-caltech.github.io/kyvo/#bibtex">BibTeX</a>
+            </p>
+          </div>
+        </article>
 
-          <!-- NEW 2024: XPL (TMLR) -->
-          <table
-            style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-            <tbody>
-              <tr onmouseout="nlt_stop()" onmouseover="nlt_start()">
-                <td style="padding:20px;width:25%;vertical-align:middle">
-                  <!-- Optional teaser: images/2024_XPL.png -->
-                  <img src="images/2024_XPL.png" width="160" height="100"
-                    alt="XPL: Semi-Supervised Prompt Learning for VLMs teaser" loading="lazy" decoding="async">
-                </td>
-                <td width="75%" valign="middle">
-                  <a href="https://openreview.net/forum?id=oxAZv3QD6M">
-                    <papertitle>XPL: A Cross-Model framework for Semi-Supervised Prompt Learning in Vision-Language
-                      Models</papertitle>
-                  </a>
-                  <br>
-                  Omprakash Chakraborty, <strong>Aadarsh Sahoo</strong>, Rameswar Panda, Abir Das<br>
-                  <em>Transactions on Machine Learning Research (<strong>TMLR</strong>)</em>, 2024.<br>
-                  <a href="https://openreview.net/forum?id=oxAZv3QD6M">paper</a> /
-                  <a href="https://jmlr.org/tmlr/papers/">TMLR</a>
-                  <p>A semi-supervised prompt learning framework that leverages unlabeled data to improve VLM adaptation
-                    via cross-model consistency.</p>
-                </td>
-              </tr>
-            </tbody>
-          </table>
+        <!-- 2024 XPL -->
+        <article class="pub-card" aria-label="XPL">
+          <img class="pub-thumb" src="images/2024_XPL.png" alt="XPL: Semi-Supervised Prompt Learning for VLMs teaser"
+            loading="lazy" decoding="async" width="180" height="110" />
+          <div>
+            <h3 class="pub-title"><a href="https://openreview.net/forum?id=oxAZv3QD6M">XPL: A Cross-Model framework for
+                Semi-Supervised Prompt Learning in Vision–Language Models</a></h3>
+            <p class="pub-meta">Omprakash Chakraborty, <strong>Aadarsh Sahoo</strong>, Rameswar Panda, Abir Das —
+              <em>TMLR</em>, 2024
+            </p>
+            <p>A semi-supervised prompt learning framework leveraging unlabeled data to improve VLM adaptation via
+              cross-model consistency.</p>
+            <p class="pub-links">
+              <a class="link-chip" href="https://openreview.net/forum?id=oxAZv3QD6M">Paper</a>
+              <a class="link-chip" href="https://jmlr.org/tmlr/papers/">TMLR</a>
+            </p>
+          </div>
+        </article>
 
+        <!-- 2023 AnyDA -->
+        <article class="pub-card" aria-label="AnyDA">
+          <img class="pub-thumb" src="images/2022_AnyDA.png" alt="AnyDA: Anytime Domain Adaptation teaser"
+            loading="lazy" decoding="async" width="180" height="110" />
+          <div>
+            <h3 class="pub-title"><a href="data/AnyDA_2022.pdf">AnyDA: Anytime Domain Adaptation</a></h3>
+            <p class="pub-meta">Omprakash Chakraborty, <strong>Aadarsh Sahoo</strong>, Rameswar Panda, Abir Das —
+              <em>ICLR</em>, 2023
+            </p>
+            <p>We propose a domain-alignment approach with switchable depth, width, and input resolution to realize
+              accuracy–efficiency trade-offs under different constraints.</p>
+            <p class="pub-links">
+              <a class="link-chip" href="https://cvir.github.io/projects/anyda.html">Project</a>
+              <a class="link-chip" href="https://cvir.github.io/projects/anyda.html">Code</a>
+            </p>
+          </div>
+        </article>
 
-          <table
-            style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-            <tbody>
-              <tr onmouseout="nlt_stop()" onmouseover="nlt_start()">
-                <td style="padding:20px;width:25%;vertical-align:middle">
-                  <img src="images/2022_AnyDA.png" width="160" height="100"
-                    alt="AnyDA: Anytime Domain Adaptation teaser" loading="lazy" decoding="async">
-                </td>
-                <td width="75%" valign="middle">
-                  <a href="data/AnyDA_2022.pdf">
-                    <papertitle>AnyDA: Anytime Domain Adaptation</papertitle>
-                  </a>
-                  <br>
-                  Omprakash Chakraborty, <strong>Aadarsh Sahoo</strong>, Rameswar Panda, Abir Das<br>
-                  <em>11th International Conference on Learning Representations (<strong>ICLR</strong>)</em>, 2023.<br>
-                  <a href="https://cvir.github.io/projects/anyda.html">project page</a> /
-                  <a href="https://cvir.github.io/projects/anyda.html">code</a>
-                  <p>We introduce a novel approach for anytime domain adaptation by considering domain alignment with
-                    switchable depth, width and input resolutions to achieve accuracy-efficiency trade-offs in the
-                    target domain for different resource constraints.</p>
-                </td>
-              </tr>
-            </tbody>
-          </table>
+        <!-- 2021 CoMix -->
+        <article class="pub-card" aria-label="CoMix">
+          <img class="pub-thumb" src="images/NeurIPS_2021_CoMix.png"
+            alt="CoMix: Temporal contrastive video domain adaptation graphic" loading="lazy" decoding="async"
+            width="180" height="110" />
+          <div>
+            <h3 class="pub-title"><a
+                href="https://proceedings.neurips.cc/paper/2021/file/c47e93742387750baba2e238558fa12d-Paper.pdf">Contrast
+                and Mix: Temporal Contrastive Video Domain Adaptation with Background Mixing</a></h3>
+            <p class="pub-meta"><strong>Aadarsh Sahoo</strong>, Rutav Shah, Rameswar Panda, Kate Saenko, Abir Das —
+              <em>NeurIPS</em>, 2021
+            </p>
+            <p>We introduce a temporal contrastive learning approach for unsupervised video domain adaptation by
+              leveraging video speed, background mixing, and target pseudo-labels.</p>
+            <p class="pub-links">
+              <a class="link-chip" href="https://cvir.github.io/projects/comix.html">Project</a>
+              <a class="link-chip" href="https://cvir.github.io/projects/images/comix_neurips2021_poster.png">Poster</a>
+              <a class="link-chip"
+                href="https://slideslive.com/38967894/contrast-and-mix-temporal-contrastive-video-domain-adaptation-with-background-mixing">Video</a>
+              <a class="link-chip"
+                href="https://docs.google.com/presentation/d/1UBvqIRdl7DkmZN7_3lumpMg5kVyjcOl6B507pw4Ul98/edit#slide=id.gf354b2a2b3_0_351">Slides</a>
+              <a class="link-chip" href="https://github.com/CVIR/CoMix">Code</a>
+            </p>
+          </div>
+        </article>
 
-          <table
-            style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-            <tbody>
-              <tr onmouseout="nlt_stop()" onmouseover="nlt_start()">
-                <td style="padding:20px;width:25%;vertical-align:middle">
-                  <img src="images/NeurIPS_2021_CoMix.png" width="160" height="100"
-                    alt="CoMix: Temporal contrastive video domain adaptation graphic" loading="lazy" decoding="async">
-                </td>
-                <td width="75%" valign="middle">
-                  <a href="https://proceedings.neurips.cc/paper/2021/file/c47e93742387750baba2e238558fa12d-Paper.pdf">
-                    <papertitle>Contrast and Mix: Temporal Contrastive Video Domain Adaptation with Background Mixing
-                    </papertitle>
-                  </a>
-                  <br>
-                  <strong>Aadarsh Sahoo</strong>, Rutav Shah, Rameswar Panda, Kate Saenko, Abir Das<br>
-                  <em>35th Conference on Neural Information Processing Systems (<strong>NeurIPS</strong>)</em>,
-                  2021.<br>
-                  <a href="https://cvir.github.io/projects/comix.html">project page</a> /
-                  <a href="https://cvir.github.io/projects/images/comix_neurips2021_poster.png">poster</a> /
-                  <a
-                    href="https://slideslive.com/38967894/contrast-and-mix-temporal-contrastive-video-domain-adaptation-with-background-mixing">video
-                    presentation</a> /
-                  <a
-                    href="https://docs.google.com/presentation/d/1UBvqIRdl7DkmZN7_3lumpMg5kVyjcOl6B507pw4Ul98/edit#slide=id.gf354b2a2b3_0_351">slides</a>
-                  /
-                  <a href="https://github.com/CVIR/CoMix">code</a>
-                  <p>We introduce a novel temporal contrastive learning approach for unsupervised video domain
-                    adaptation, achieved by jointly leveraging video speed, background mixing, and target pseudo-labels.
-                  </p>
-                </td>
-              </tr>
-            </tbody>
-          </table>
+        <!-- 2023 SLM (WACV + NeurIPS-W) -->
+        <article class="pub-card" aria-label="SLM">
+          <img class="pub-thumb" src="images/arXiv_2020_SLM.png" alt="SLM: Select, Label, and Mix teaser" loading="lazy"
+            decoding="async" width="180" height="110" />
+          <div>
+            <h3 class="pub-title"><a
+                href="https://openaccess.thecvf.com/content/WACV2023/papers/Sahoo_Select_Label_and_Mix_Learning_Discriminative_Invariant_Feature_Representations_for_WACV_2023_paper.pdf">Select,
+                Label, and Mix: Learning Discriminative Invariant Feature Representations for Partial Domain
+                Adaptation</a></h3>
+            <p class="pub-meta"><strong>Aadarsh Sahoo</strong>, Rameswar Panda, Rogerio Feris, Kate Saenko, Abir Das —
+              <em>NeurIPS-W</em> 2021; <em>WACV</em> 2023 <em>(Best Paper Honorable Mention)</em>
+            </p>
+            <p>We develop a ‘Select, Label, and Mix’ (SLM) framework that aims to learn discriminative invariant feature
+              representations for partial domain adaptation.</p>
+            <p class="pub-links">
+              <a class="link-chip" href="https://cvir.github.io/projects/slm.html">Project</a>
+              <a class="link-chip" href="https://video.vast.uccs.edu/WACV23/1177-wacv-post.pdf">Poster</a>
+              <a class="link-chip" href="https://video.vast.uccs.edu/WACV23/1177_wacv.mp4">Video</a>
+              <a class="link-chip"
+                href="https://docs.google.com/presentation/d/1JlORqqL4LlOOqaAYqriaJ5g5UAIumURyrGF0BAj0gQY/edit?usp=sharing">Slides</a>
+              <a class="link-chip" href="https://github.com/CVIR/SLM">Code</a>
+            </p>
+          </div>
+        </article>
 
-          <table
-            style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-            <tbody>
-              <tr onmouseout="nlt_stop()" onmouseover="nlt_start()">
-                <td style="padding:20px;width:25%;vertical-align:middle">
-                  <img src="images/arXiv_2020_SLM.png" width="160" height="100" alt="SLM: Select, Label, and Mix teaser"
-                    loading="lazy" decoding="async">
-                </td>
-                <td width="75%" valign="middle">
-                  <a
-                    href="https://openaccess.thecvf.com/content/WACV2023/papers/Sahoo_Select_Label_and_Mix_Learning_Discriminative_Invariant_Feature_Representations_for_WACV_2023_paper.pdf">
-                    <papertitle>Select, Label, and Mix: Learning Discriminative Invariant Feature Representations for
-                      Partial Domain Adaptation</papertitle>
-                  </a>
-                  <br>
-                  <strong>Aadarsh Sahoo</strong>, Rameswar Panda, Rogerio Feris, Kate Saenko, Abir Das<br>
-                  <em>NeurIPS DistShift Workshop (<strong>NeurIPS-W</strong>)</em>, 2021.<br>
-                  <em>Winter Conference on Applications of Computer Vision (<strong>WACV</strong>)</em>, 2023.<br>
-                  <em>
-                    <font color="red"><strong>(Best Paper Honorable Mention)</strong></font>.
-                  </em><br>
-                  <a href="https://cvir.github.io/projects/slm.html">project page</a> /
-                  <a href="https://video.vast.uccs.edu/WACV23/1177-wacv-post.pdf">poster</a> /
-                  <a href="https://video.vast.uccs.edu/WACV23/1177_wacv.mp4">video presentation</a> /
-                  <a
-                    href="https://docs.google.com/presentation/d/1JlORqqL4LlOOqaAYqriaJ5g5UAIumURyrGF0BAj0gQY/edit?usp=sharing">slides</a>
-                  /
-                  <a href="https://github.com/CVIR/SLM">code</a>
-                  <p>We develop a novel 'Select, Label, and Mix' (SLM) framework that aims to learn discriminative
-                    invariant feature representations for partial domain adaptation.</p>
-                </td>
-              </tr>
-            </tbody>
-          </table>
+        <!-- 2020 ECCV-W Imbalance -->
+        <article class="pub-card" aria-label="Imbalance">
+          <img class="pub-thumb" src="images/ECCV_2020_W_Imbalance.png"
+            alt="Mitigating Dataset Imbalance via Joint Generation and Classification teaser" loading="lazy"
+            decoding="async" width="180" height="110" />
+          <div>
+            <h3 class="pub-title"><a href="data/Imbalance_ECCVW_2020.pdf">Mitigating Dataset Imbalance via Joint
+                Generation and Classification</a></h3>
+            <p class="pub-meta"><strong>Aadarsh Sahoo</strong>, Ankit Singh, Rameswar Panda, Rogerio Feris, Abir Das —
+              <em>ECCV-W</em>, 2020 <em>(Oral)</em>
+            </p>
+            <p>We introduce a dataset repair strategy combining a classifier with a GAN to augment minority-class
+              examples.</p>
+            <p class="pub-links">
+              <a class="link-chip" href="https://cvir.github.io/projects/imbalance.html">Project</a>
+              <a class="link-chip" href="https://cvir.github.io/projects/imbalance.html">Code</a>
+              <a class="link-chip" href="https://www.youtube.com/watch?v=VLqkW6IAFhE&t=4779s">Talk</a>
+            </p>
+          </div>
+        </article>
+      </div>
+    </section>
 
-          <table
-            style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-            <tbody>
-              <tr onmouseout="nlt_stop()" onmouseover="nlt_start()">
-                <td style="padding:20px;width:25%;vertical-align:middle">
-                  <img src="images/ECCV_2020_W_Imbalance.png" width="160" height="100"
-                    alt="Mitigating Dataset Imbalance via Joint Generation and Classification teaser" loading="lazy"
-                    decoding="async">
-                </td>
-                <td width="75%" valign="middle">
-                  <a href="data/Imbalance_ECCVW_2020.pdf">
-                    <papertitle>Mitigating Dataset Imbalance via Joint Generation and Classification</papertitle>
-                  </a>
-                  <br>
-                  <strong>Aadarsh Sahoo</strong>, Ankit Singh, Rameswar Panda, Rogerio Feris, Abir Das<br>
-                  <em>ECCV Workshop on Imbalance Problems in Computer Vision (<strong>ECCV-W</strong>)</em>, 2020 <em>
-                    <font color="red"><strong>(Oral)</strong></font>.
-                  </em><br>
-                  <a href="https://cvir.github.io/projects/imbalance.html">project page</a> /
-                  <a href="https://cvir.github.io/projects/imbalance.html">code</a> /
-                  <a href="https://www.youtube.com/watch?v=VLqkW6IAFhE&t=4779s">live talk</a>
-                  <p>We introduce a joint dataset repairment strategy by combining a classifier with a GAN that makes up
-                    for the deficit of training examples from the minority class by producing additional examples.</p>
-                </td>
-              </tr>
-            </tbody>
-          </table>
+    <!-- Services -->
+    <section id="services" class="services" aria-labelledby="services-title">
+      <h2 class="section-title" id="services-title">Services</h2>
+      <ul>
+        <li><strong>Reviewer</strong>: CVPR, NeurIPS, ICLR, ICCV, WACV, TPAMI.</li>
+        <li><strong>Student Volunteer &amp; Reviewer</strong>: DNetCV @ <a href="http://cvpr2022.thecvf.com/">CVPR
+            2022</a>.</li>
+        <li><strong>Student Volunteer &amp; Reviewer</strong>: DNetCV @ <a href="http://cvpr2021.thecvf.com/">CVPR
+            2021</a>.</li>
+      </ul>
+    </section>
 
-          <table
-            style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-            <tbody>
-              <tr>
-                <td style="padding:20px;width:100%;vertical-align:middle">
-                  <heading>Services</heading>
-                  <ul>
-                    <li><strong>Reviewer</strong>: CVPR, NeurIPS, ICLR, ICCV, WACV, TPAMI.</li>
-                    <li><strong>Student Volunteer and Reviewer</strong>: <a
-                        href="https://sites.google.com/view/cvpr2022-dnetcv/">Dynamic Neural Networks Meets Computer
-                        Vision (DNetCV)</a> at <a href="http://cvpr2022.thecvf.com/">CVPR 2022</a>.</li>
-                    <li><strong>Student Volunteer and Reviewer</strong>: <a
-                        href="https://sites.google.com/view/cvpr2021-dnetcv/">Dynamic Neural Networks Meets Computer
-                        Vision (DNetCV)</a> at <a href="http://cvpr2021.thecvf.com/">CVPR 2021</a>.</li>
-                  </ul>
-                </td>
-              </tr>
-            </tbody>
-          </table>
+    <!-- Contact / Footer -->
+    <section id="contact" aria-labelledby="contact-title">
+      <h2 class="section-title" id="contact-title">Contact</h2>
+      <p>Email: <a href="mailto:aadarsh.sahoo.99@gmail.com">aadarsh.sahoo.99@gmail.com</a></p>
+      <p>Profiles: <a href="https://scholar.google.com/citations?user=1nPhcH0AAAAJ">Google Scholar</a> · <a
+          href="https://www.linkedin.com/in/aadarshsahoo/">LinkedIn</a> · <a href="https://github.com/aadsah">GitHub</a>
+      </p>
+    </section>
 
-          <table
-            style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-            <tbody>
-              <tr>
-                <td style="padding:0px">
-                  <br>
-                  <p style="text-align:right;font-size:small;">
-                    Webpage template courtesy: <a href="https://jonbarron.info/">Jon Barron</a>
-                  </p>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+    <footer role="contentinfo">
+      <div>
+        <small>Webpage template adapted from <a href="https://jonbarron.info/">Jon Barron</a>. Built with semantic HTML
+          and modern CSS.</small>
+      </div>
+    </footer>
+  </main>
 </body>
 
 </html>
