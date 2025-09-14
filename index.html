@@ -51,7 +51,8 @@
     "sameAs": [
       "https://scholar.google.com/citations?user=1nPhcH0AAAAJ",
       "https://www.linkedin.com/in/aadarshsahoo/",
-      "https://github.com/aadsah"
+      "https://github.com/aadsah",
+      "https://x.com/SahooAadarsh"
     ],
     "knowsAbout": [
       "Computer Vision",
@@ -79,6 +80,8 @@
       /* blue-600 */
       --accent-weak: #eff6ff;
       /* blue-50 */
+      --font-sans: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+      --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
       color-scheme: light;
     }
 
@@ -93,8 +96,8 @@
 
     body {
       margin: 0;
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Inter, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
-      line-height: 1.6;
+      font-family: var(--font-sans);
+      line-height: 1.55;
       background:
         /* subtle tech grid */
         linear-gradient(to bottom, transparent 0, transparent 23px, var(--surface) 24px),
@@ -104,13 +107,15 @@
       color: var(--text);
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
+      text-rendering: optimizeLegibility;
+      font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
     }
 
     /* Layout */
     .container {
       max-width: 980px;
       margin: 0 auto;
-      padding: 24px;
+      padding: 18px;
     }
 
     header.site-header {
@@ -126,16 +131,17 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 16px;
+      gap: 12px;
     }
 
     .brand {
       font-weight: 700;
       letter-spacing: 0.3px;
-      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+      font-family: var(--font-mono);
       display: inline-flex;
       align-items: center;
       gap: 8px;
+      font-size: 14px;
     }
 
     .brand::after {
@@ -150,8 +156,10 @@
     .nav a {
       color: var(--muted);
       text-decoration: none;
-      padding: 8px 10px;
-      border-radius: 10px;
+      padding: 6px 8px;
+      border-radius: 8px;
+      font-family: var(--font-mono);
+      font-size: 12.5px;
     }
 
     .nav a:hover,
@@ -182,54 +190,58 @@
       border-radius: 8px;
     }
 
-    /* Hero */
+    /* Hero – single column */
     .hero {
       display: grid;
-      grid-template-columns: 1.6fr 1fr;
-      gap: 32px;
-      align-items: center;
-      padding: 48px 0 12px;
+      grid-template-columns: 1fr;
+      gap: 16px;
+      align-items: start;
+      padding: 24px 0 6px;
     }
 
     h1 {
-      font-size: clamp(28px, 5vw, 40px);
+      font-size: clamp(24px, 4.2vw, 34px);
       line-height: 1.15;
-      margin: 0 0 8px 0;
+      margin: 0 0 6px 0;
       letter-spacing: -0.02em;
+      font-family: var(--font-mono);
+      font-weight: 750;
     }
 
     .subtitle {
       color: var(--muted);
-      margin: 0 0 20px;
+      margin: 0 0 10px;
     }
 
     .cta {
       display: flex;
       flex-wrap: wrap;
-      gap: 8px;
-      margin-top: 18px;
+      gap: 6px;
+      margin-top: 8px;
     }
 
     /* Cute, small, techy buttons with icons */
     .btn {
-      --pad-y: 7px;
-      --pad-x: 11px;
+      --pad-y: 5px;
+      --pad-x: 10px;
       --radius: 9999px;
-      --shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+      --shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
       appearance: none;
       display: inline-flex;
       align-items: center;
-      gap: 8px;
+      gap: 6px;
       border: 1px solid var(--border);
       background: var(--card);
       color: var(--text);
       padding: var(--pad-y) var(--pad-x);
       border-radius: var(--radius);
       text-decoration: none;
-      font-weight: 500;
-      font-size: 14px;
+      font-weight: 600;
+      font-size: 12.5px;
+      font-family: var(--font-mono);
       transition: transform .06s ease, background .2s ease, border-color .2s ease, box-shadow .2s ease;
       box-shadow: var(--shadow);
+      letter-spacing: 0.2px;
     }
 
     .btn:hover {
@@ -243,15 +255,20 @@
     }
 
     .btn .icon {
-      width: 14px;
-      height: 14px;
+      width: 12px;
+      height: 12px;
       display: inline-block;
     }
 
     .btn .icon svg {
-      width: 14px;
-      height: 14px;
+      width: 12px;
+      height: 12px;
       display: block;
+      shape-rendering: geometricPrecision;
+    }
+
+    .btn .icon svg * {
+      vector-effect: non-scaling-stroke;
     }
 
     .btn.primary {
@@ -264,31 +281,35 @@
     }
 
     .portrait {
-      width: 100%;
-      max-width: 320px;
-      border-radius: 16px;
-      display: block;
+      width: min(45vw, 200px);
+      aspect-ratio: 1 / 1;
+      height: auto;
+      object-fit: cover;
+      border-radius: 9999px;
+      /* perfect circle */
       border: 1px solid var(--border);
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+      box-shadow: 0 0 0 3px var(--bg), 0 0 0 4px color-mix(in srgb, var(--accent) 18%, transparent), 0 10px 22px rgba(0, 0, 0, 0.06);
+      display: block;
+      margin-top: 4px;
     }
 
     /* Sections */
     section {
-      padding: 28px 0;
+      padding: 14px 0;
     }
 
     .section-title {
-      font-size: 12px;
-      letter-spacing: .22em;
+      font-size: 11px;
+      letter-spacing: .24em;
       text-transform: uppercase;
       color: var(--muted);
-      margin-bottom: 16px;
-      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      margin-bottom: 8px;
+      font-family: var(--font-mono);
     }
 
     /* About copy */
     .about p {
-      margin: 8px 0;
+      margin: 6px 0;
     }
 
     .about a {
@@ -296,7 +317,7 @@
       text-underline-offset: 3px;
     }
 
-    /* News timeline */
+    /* News timeline – single column, compact */
     .timeline {
       list-style: none;
       padding: 0;
@@ -305,10 +326,10 @@
 
     .timeline li {
       display: grid;
-      grid-template-columns: 110px 1fr;
-      gap: 16px;
+      grid-template-columns: 90px 1fr;
+      gap: 10px;
       align-items: start;
-      padding: 10px 0;
+      padding: 5px 0;
       border-bottom: 1px dashed var(--border);
     }
 
@@ -319,29 +340,34 @@
     .timeline time {
       font-variant-numeric: tabular-nums;
       color: var(--muted);
-      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-family: var(--font-mono);
+      font-size: 12.5px;
     }
 
-    /* Publications */
+    .timeline div {
+      font-size: 13.5px;
+    }
+
+    /* Publications – single column, compact */
     .pub-list {
       display: grid;
-      gap: 16px;
+      gap: 10px;
     }
 
     .pub-card {
       display: grid;
-      grid-template-columns: 180px 1fr;
-      gap: 16px;
+      grid-template-columns: 130px 1fr;
+      gap: 10px;
       background: var(--card);
       border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 14px;
+      border-radius: 12px;
+      padding: 8px;
       box-shadow: 0 1px 0 rgba(0, 0, 0, 0.02);
     }
 
     .pub-thumb {
       width: 100%;
-      height: 110px;
+      height: 80px;
       object-fit: cover;
       border-radius: 10px;
       border: 1px solid var(--border);
@@ -349,30 +375,35 @@
     }
 
     .pub-title {
-      font-weight: 650;
-      margin: 0 0 4px;
+      font-weight: 700;
+      margin: 0 0 2px;
+      font-family: var(--font-mono);
+      letter-spacing: 0.05px;
+      font-size: 14.5px;
     }
 
     .pub-meta {
       color: var(--muted);
-      margin: 0 0 10px;
+      margin: 0 0 6px;
+      font-size: 12.5px;
     }
 
     .pub-links {
       display: flex;
-      gap: 8px;
+      gap: 6px;
       flex-wrap: wrap;
     }
 
     .link-chip {
-      font-size: 13px;
-      padding: 6px 10px;
+      font-size: 12px;
+      padding: 5px 8px;
       border: 1px solid var(--border);
       border-radius: 9999px;
       text-decoration: none;
       color: var(--text);
       background: var(--card);
       box-shadow: 0 1px 0 rgba(0, 0, 0, 0.02);
+      font-family: var(--font-mono);
     }
 
     .link-chip:hover {
@@ -385,11 +416,15 @@
       padding-left: 18px;
     }
 
+    .services li {
+      margin: 3px 0;
+    }
+
     /* Footer */
     footer {
-      padding: 24px 0 40px;
+      padding: 14px 0 22px;
       color: var(--muted);
-      font-size: 14px;
+      font-size: 13px;
       border-top: 1px solid var(--border);
     }
 
@@ -410,16 +445,12 @@
 
     /* Responsive */
     @media (max-width: 860px) {
-      .hero {
-        grid-template-columns: 1fr;
-      }
-
-      .hero .cta {
-        margin-bottom: 8px;
-      }
-
       .pub-card {
         grid-template-columns: 1fr;
+      }
+
+      .portrait {
+        margin-inline: auto;
       }
     }
   </style>
@@ -452,51 +483,61 @@
         <div class="cta" role="group" aria-label="Quick actions">
           <a class="btn primary" href="mailto:aadarsh.sahoo.99@gmail.com">
             <span class="icon" aria-hidden="true">
+              <!-- Envelope (stroke) -->
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
                 stroke-linejoin="round" aria-hidden="true">
-                <path d="M4 6h16a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2z" />
-                <path d="m22 8-10 6L2 8" />
+                <rect x="3" y="5" width="18" height="14" rx="2" />
+                <path d="m3 7 9 6 9-6" />
               </svg>
             </span>
             Email
           </a>
           <a class="btn" href="https://scholar.google.com/citations?user=1nPhcH0AAAAJ">
             <span class="icon" aria-hidden="true">
+              <!-- Mortarboard (stroke) -->
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
                 stroke-linejoin="round">
-                <path d="M12 3 2 9l10 6 10-6-10-6Z" />
-                <path d="M6 12v5c0 .6.4 1 1 1h10c.6 0 1-.4 1-1v-5" />
+                <path d="M22 10 12 5 2 10l10 5 10-5Z" />
+                <path d="M6 12v4.5c0 1.6 3.6 2.8 6 2.8s6-1.2 6-2.8V12" />
               </svg>
             </span>
             Scholar
           </a>
           <a class="btn" href="data/Resume_Aadarsh.pdf">
             <span class="icon" aria-hidden="true">
+              <!-- File (stroke) -->
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
                 stroke-linejoin="round">
-                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z" />
+                <path d="M14 2H7a3 3 0 0 0-3 3v14a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V8Z" />
                 <path d="M14 2v6h6" />
-                <path d="M16 13H8" />
-                <path d="M16 17H8" />
-                <path d="M10 9H9" />
               </svg>
             </span>
             Resume
           </a>
+          <a class="btn" href="https://x.com/SahooAadarsh" rel="me">
+            <span class="icon" aria-hidden="true">
+              <!-- X (brand, fill) -->
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path fill="currentColor" d="M3 3h4.9l5 6.6L18.6 3H21l-7.2 8.3L21 21h-4.9l-5.2-7-6.1 7H3l7.6-9L3 3z" />
+              </svg>
+            </span>
+            X/Twitter
+          </a>
           <a class="btn" href="https://www.linkedin.com/in/aadarshsahoo/" rel="me">
             <span class="icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                <rect x="3" y="3" width="18" height="18" rx="3" />
-                <path fill="#fff"
-                  d="M8 10h2v7H8zM9 7.8a1.2 1.2 0 1 1 0-2.4 1.2 1.2 0 0 1 0 2.4zM12 10h2v1.1h.03c.28-.5 1-.98 2.05-.98 2.2 0 2.6 1.3 2.6 3v3.9h-2v-3.5c0-.83-.02-1.9-1.16-1.9-1.17 0-1.35.9-1.35 1.84V17h-2z" />
+              <!-- LinkedIn (brand, fill) -->
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path fill="currentColor"
+                  d="M4.98 3.5C4.98 4.6 4.1 5.5 3 5.5S1.02 4.6 1.02 3.5 1.9 1.5 3 1.5s1.98.9 1.98 2zM1 8h4v12H1zM9 8h3.8v1.7h.05c.53-1 1.82-2 3.75-2 4 0 4.7 2.6 4.7 6v6H18v-5.3c0-1.3-.02-3-1.85-3-1.85 0-2.14 1.4-2.14 2.9V20H9z" />
               </svg>
             </span>
             LinkedIn
           </a>
           <a class="btn" href="https://github.com/aadsah" rel="me">
             <span class="icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                <path
+              <!-- GitHub (brand, fill) -->
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path fill="currentColor"
                   d="M12 .5A11.5 11.5 0 0 0 .5 12.3c0 5.2 3.4 9.6 8 11.1.6.1.8-.3.8-.6v-2.2c-3.3.7-4-1.4-4-1.4-.5-1.2-1.2-1.5-1.2-1.5-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 .1.8-.9 1.8-1.3-2.6-.3-5.2-1.3-5.2-5.8 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.6.1-3.2 0 0 1-.3 3.3 1.2a11.4 11.4 0 0 1 6 0C18.1 3.8 19 4 19 4c.6 1.6.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.7 5.5-5.2 5.8.9.8 1 1.7 1 2.8v4.1c0 .3.2.7.9.6a11.6 11.6 0 0 0 7.8-11.1A11.5 11.5 0 0 0 12 .5Z" />
               </svg>
             </span>
@@ -776,7 +817,7 @@
       <p>Email: <a href="mailto:aadarsh.sahoo.99@gmail.com">aadarsh.sahoo.99@gmail.com</a></p>
       <p>Profiles: <a href="https://scholar.google.com/citations?user=1nPhcH0AAAAJ">Google Scholar</a> · <a
           href="https://www.linkedin.com/in/aadarshsahoo/">LinkedIn</a> · <a href="https://github.com/aadsah">GitHub</a>
-      </p>
+        · <a href="https://x.com/SahooAadarsh">X/Twitter</a></p>
     </section>
 
     <footer role="contentinfo">
