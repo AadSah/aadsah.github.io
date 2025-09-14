@@ -485,6 +485,81 @@
         margin-inline: auto;
       }
     }
+
+    /* Enhanced tech buttons (gradient ring + brand accent) */
+    .btn {
+      --btn-accent: var(--accent);
+      --pad-y: 6px;
+      --pad-x: 12px;
+      --radius: 9999px;
+      appearance: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--font-mono);
+      font-weight: 600;
+      font-size: 12.5px;
+      padding: var(--pad-y) var(--pad-x);
+      border: 1px solid transparent;
+      border-radius: var(--radius);
+      color: var(--text);
+      background:
+        linear-gradient(var(--card), var(--card)) padding-box,
+        conic-gradient(from 180deg at 50% 50%, color-mix(in srgb, var(--btn-accent) 28%, transparent), transparent 25%, color-mix(in srgb, var(--btn-accent) 12%, transparent)) border-box;
+      box-shadow: 0 1px 0 rgba(0, 0, 0, 0.02);
+      transition: transform .06s ease, box-shadow .2s ease, border-color .2s ease, background .2s ease, color .2s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.07), 0 0 0 3px color-mix(in srgb, var(--btn-accent) 12%, transparent);
+    }
+
+    .btn:active {
+      transform: translateY(0);
+    }
+
+    .btn .icon {
+      width: 14px;
+      height: 14px;
+      display: inline-grid;
+      place-items: center;
+    }
+
+    .btn .icon svg {
+      width: 14px;
+      height: 14px;
+      display: block;
+      shape-rendering: geometricPrecision;
+    }
+
+    .btn .icon svg * {
+      vector-effect: non-scaling-stroke;
+    }
+
+    .btn.primary {
+      --btn-accent: var(--accent);
+      background:
+        linear-gradient(var(--card), var(--card)) padding-box,
+        conic-gradient(from 180deg at 50% 50%, color-mix(in srgb, var(--btn-accent) 38%, transparent), transparent 25%, color-mix(in srgb, var(--btn-accent) 18%, transparent)) border-box;
+    }
+
+    /* Brand accents */
+    .btn.scholar {
+      --btn-accent: #1a73e8;
+    }
+
+    .btn.linkedin {
+      --btn-accent: #0a66c2;
+    }
+
+    .btn.github {
+      --btn-accent: #171515;
+    }
+
+    .btn.x {
+      --btn-accent: #000000;
+    }
   </style>
 </head>
 
@@ -514,9 +589,9 @@
             href="https://gkioxari.github.io/">Prof. Georgia Gkioxari</a> and <a
             href="https://www.cms.caltech.edu/people/perona">Prof. Pietro Perona</a>.</p>
         <div class="cta" role="group" aria-label="Quick actions">
-          <a class="btn primary" href="mailto:aadarsh.sahoo.99@gmail.com">
+          <a class="btn primary email" href="mailto:aadarsh.sahoo.99@gmail.com">
             <span class="icon" aria-hidden="true">
-              <!-- Envelope (stroke) -->
+              <!-- Envelope (refined stroke) -->
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
                 stroke-linejoin="round" aria-hidden="true">
                 <rect x="3" y="5" width="18" height="14" rx="2" />
@@ -525,9 +600,9 @@
             </span>
             Email
           </a>
-          <a class="btn" href="https://scholar.google.com/citations?user=1nPhcH0AAAAJ">
+          <a class="btn scholar" href="https://scholar.google.com/citations?user=1nPhcH0AAAAJ">
             <span class="icon" aria-hidden="true">
-              <!-- Mortarboard (stroke) -->
+              <!-- Mortarboard (refined) -->
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
                 stroke-linejoin="round">
                 <path d="M22 10 12 5 2 10l10 5 10-5Z" />
@@ -538,7 +613,7 @@
           </a>
           <a class="btn" href="data/Resume_Aadarsh.pdf">
             <span class="icon" aria-hidden="true">
-              <!-- File (stroke) -->
+              <!-- File (refined) -->
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
                 stroke-linejoin="round">
                 <path d="M14 2H7a3 3 0 0 0-3 3v14a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V8Z" />
@@ -547,31 +622,33 @@
             </span>
             Resume
           </a>
-          <a class="btn" href="https://x.com/SahooAadarsh" rel="me">
+          <a class="btn x" href="https://x.com/SahooAadarsh" rel="me">
             <span class="icon" aria-hidden="true">
-              <!-- X (brand, fill) -->
+              <!-- X (high-quality glyph) -->
               <svg viewBox="0 0 24 24" aria-hidden="true">
-                <path fill="currentColor" d="M3 3h4.9l5 6.6L18.6 3H21l-7.2 8.3L21 21h-4.9l-5.2-7-6.1 7H3l7.6-9L3 3z" />
+                <path fill="currentColor"
+                  d="M18.244 2H21l-6.5 7.444L22 22h-6.756l-4.45-5.96L5.5 22H3l7.09-8.115L2 2h6.756l4.06 5.44L18.244 2z" />
               </svg>
             </span>
             X/Twitter
           </a>
-          <a class="btn" href="https://www.linkedin.com/in/aadarshsahoo/" rel="me">
+          <a class="btn linkedin" href="https://www.linkedin.com/in/aadarshsahoo/" rel="me">
             <span class="icon" aria-hidden="true">
-              <!-- LinkedIn (brand, fill) -->
+              <!-- LinkedIn (clean rounded square) -->
               <svg viewBox="0 0 24 24" aria-hidden="true">
-                <path fill="currentColor"
-                  d="M4.98 3.5C4.98 4.6 4.1 5.5 3 5.5S1.02 4.6 1.02 3.5 1.9 1.5 3 1.5s1.98.9 1.98 2zM1 8h4v12H1zM9 8h3.8v1.7h.05c.53-1 1.82-2 3.75-2 4 0 4.7 2.6 4.7 6v6H18v-5.3c0-1.3-.02-3-1.85-3-1.85 0-2.14 1.4-2.14 2.9V20H9z" />
+                <rect x="2" y="2" width="20" height="20" rx="4.5" fill="currentColor" />
+                <path fill="#fff"
+                  d="M7.2 9.6H9.6V18H7.2zM8.4 6.4a1.4 1.4 0 1 1 0-2.8 1.4 1.4 0 0 1 0 2.8zM10.8 9.6h2.3v1.2h.03c.32-.6 1.16-1.32 2.48-1.32 2.65 0 3.14 1.74 3.14 4v4.5h-2.4v-4c0-1-.02-2.28-1.39-2.28-1.39 0-1.6 1.06-1.6 2.2V18h-2.56z" />
               </svg>
             </span>
             LinkedIn
           </a>
-          <a class="btn" href="https://github.com/aadsah" rel="me">
+          <a class="btn github" href="https://github.com/aadsah" rel="me">
             <span class="icon" aria-hidden="true">
-              <!-- GitHub (brand, fill) -->
+              <!-- GitHub (octocat mark) -->
               <svg viewBox="0 0 24 24" aria-hidden="true">
                 <path fill="currentColor"
-                  d="M12 .5A11.5 11.5 0 0 0 .5 12.3c0 5.2 3.4 9.6 8 11.1.6.1.8-.3.8-.6v-2.2c-3.3.7-4-1.4-4-1.4-.5-1.2-1.2-1.5-1.2-1.5-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 .1.8-.9 1.8-1.3-2.6-.3-5.2-1.3-5.2-5.8 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.6.1-3.2 0 0 1-.3 3.3 1.2a11.4 11.4 0 0 1 6 0C18.1 3.8 19 4 19 4c.6 1.6.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.7 5.5-5.2 5.8.9.8 1 1.7 1 2.8v4.1c0 .3.2.7.9.6a11.6 11.6 0 0 0 7.8-11.1A11.5 11.5 0 0 0 12 .5Z" />
+                  d="M12 2C6.477 2 2 6.484 2 12.027c0 4.43 2.865 8.186 6.839 9.504.5.093.682-.218.682-.486 0-.24-.009-.876-.014-1.72-2.782.607-3.369-1.358-3.369-1.358-.455-1.158-1.11-1.468-1.11-1.468-.908-.625.069-.612.069-.612 1.004.072 1.532 1.044 1.532 1.044.893 1.561 2.343 1.11 2.914.849.091-.654.35-1.11.636-1.366-2.22-.254-4.555-1.134-4.555-5.046 0-1.115.39-2.027 1.03-2.742-.103-.254-.447-1.277.098-2.663 0 0 .84-.27 2.75 1.048a9.41 9.41 0 0 1 5 0c1.909-1.318 2.748-1.048 2.748-1.048.546 1.386.202 2.409.1 2.663.64.715 1.029 1.627 1.029 2.742 0 3.922-2.338 4.79-4.565 5.038.359.312.679.927.679 1.868 0 1.349-.012 2.439-.012 2.773 0 .27.18.584.688.485A10.03 10.03 0 0 0 22 12.027C22 6.484 17.523 2 12 2z" />
               </svg>
             </span>
             GitHub
