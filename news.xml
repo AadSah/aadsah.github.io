@@ -15,10 +15,26 @@
   </entry>
 
   <entry>
+    <title>Outstanding Reviewer — ECCV 2024</title>
+    <link href="https://eccv2024.ecva.net/"/>
+    <id>tag:aadsah.github.io,2024-10-01:eccv-outstanding-reviewer</id>
+    <updated>2024-10-01T00:00:00Z</updated>
+    <summary>Recognized as an Outstanding Reviewer for the European Conference on Computer Vision (ECCV) 2024.</summary>
+  </entry>
+
+  <entry>
     <title>XPL accepted to TMLR</title>
     <link href="https://openreview.net/forum?id=oxAZv3QD6M"/>
     <id>tag:aadsah.github.io,2024-07-01:xpl</id>
     <updated>2024-07-01T00:00:00Z</updated>
     <summary>XPL: Semi-Supervised Prompt Learning in VLMs accepted by TMLR.</summary>
+  </entry>
+
+  <entry>
+    <title>Outstanding Reviewer — CVPR 2024</title>
+    <link href="https://cvpr.thecvf.com/"/>
+    <id>tag:aadsah.github.io,2024-06-20:cvpr-outstanding-reviewer</id>
+    <updated>2024-06-20T00:00:00Z</updated>
+    <summary>Named an Outstanding Reviewer at the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) 2024.</summary>
   </entry>
 </feed>
